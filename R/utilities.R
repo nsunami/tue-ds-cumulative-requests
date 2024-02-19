@@ -54,16 +54,16 @@ plot_cumulative <- function(data){
     # Annotating the plot 
     annotate(
       "text",
-      y = requests_4gp_2023$label_position |> max(),
+      y = requests_4gp_latest$label_position |> max(),
       x = 2022.5,
-      label = str_glue("{requests_4gp_2023$label_position |> max()} requests"),
+      label = str_glue("{requests_4gp_latest$label_position |> max()} requests"),
       size = 10,
       hjust = "right",
       vjust = "center"
     ) + 
     annotate(
       "line",
-      y = requests_4gp_2023$label_position |> max(),
+      y = requests_4gp_latest$label_position |> max(),
       x = c(2022.6, 2023)
     ) +
     # Deleting the legend
